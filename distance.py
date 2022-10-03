@@ -7,7 +7,7 @@ class loc:
 r = 6378.135
 d = 111.31945588668853276112184419674
 def err():
-    print("형식에 맞게 입력해주세요")
+    print("Please enter it according to the format")
 def calc(dis_d1, dis_m1, dis_s1, dis_d11, dis_m11, dis_s11, cd_a11, cd_b11, d):
     cok = m.cos((cd_a11 + cd_b11)/2) * d
     calc_1 = dis_d1 * cok
@@ -30,7 +30,7 @@ def calc(dis_d1, dis_m1, dis_s1, dis_d11, dis_m11, dis_s11, cd_a11, cd_b11, d):
     calc_m = round(1000 * calc,5)
     print("Distance of two points : ",calc,"km (",calc_m,"m )")
 while(True):
-    a = input("첫번째 위치의 경도와 위도를 입력해 주세요 (형식: ddd.mmmmmm/dd.mmmmmm) : ")
+    a = input("Enter the longitude and latitude of the first location (Format : ddd.mmmmmm/dd.mmmmmm) : ")
     if(len(a)==20):
         try:
             k1 = a.split("/")
@@ -50,7 +50,7 @@ while(True):
     else:
         err()
 while(True):
-    b = input("두번째 위치의 경도와 위도를 입력해 주세요 (형식: ddd.mmmmmm/dd.mmmmmm) : ")
+    b = input("Enter the longitude and latitude of the second location (Format: ddd.mmmmmm/dd.mmmmmm) : ")
     if(len(a)==20):
         try:
             k2 = b.split("/")
